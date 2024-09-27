@@ -179,9 +179,35 @@
   text-align: center;
 }
 .service{
-
+  background-image: url('./images/services-bg.png');
+  min-height: 400px;
+  margin-top: 100px;
+  font-family: Poppins;
+}
+.service h3{
+  font-size: 40px;
+  color:#fff;
+  font-weight: bold;
+  text-align: center;
+}
+.service p{
+  text-align: center;
+  color:#fff;
+}
+.service .serviceBox{
+  min-height: 280px;
+  background-color: #f76d37;
+  width:20rem;
+}
+.service .serviceBox:hover{
+  background-color: #fff;
+}
+.service .serviceBox .houseIcon{
+  width:45px;
+  min-height: 80px;
 }
 .testinmonial{
+
 
 }
 .contactus{
