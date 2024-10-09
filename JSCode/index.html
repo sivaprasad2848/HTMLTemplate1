@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width:250px;
+            height:300px;
+            border:1px solid #333;
+        }
+    </style>
+</head>
+<body>
+   <input type="text" id="txt1" placeholder="Name" >
+   <label id="error1"></label>
+   <input type="button" id="btn1" value="Enter">
+  <div id="box" class="box">
+
+  </div>
+  <div id="boxReplace" class="box">
+
+  </div>
+  <div contenteditable="true">jagsjdgsahgd</div>
+  <input type="button" value="Replace"  id="btnReplace">
+   <script>
+    var nameArray=[];
+    var btn=document.querySelector("#btn1");
+    var txt1=document.querySelector("#txt1");
+    var err=document.querySelector("#error1");
+    var boxref=document.querySelector("#box");
+    var btnrep=document.querySelector("#btnReplace");
+    var boxcontainer=document.querySelector("#boxReplace");
+    btn.onclick=function(){
+       if(txt1.value==""){
+        err.innerHTML="Plase Enter Name";
+        err.style.color="red";
+       }
+       else{
+            if(nameArray.includes(txt1.value)){
+                err.innerHTML="Value already in array";
+                err.style.color="red";
+            }
+            else{
+                nameArray.push(txt1.value);
+                boxref.innerHTML="";
+                for(item of nameArray){
+                    var p1=document.createElement("p");
+                    p1.innerHTML=item;
+                    boxref.appendChild(p1);
+                }
+                txt1.value="";
+                
+            }
+            
+       }
+    }
+    txt1.onclick=function(){
+        err.innerHTML="";
+    }
+    btnrep.onclick=function(){
+        
+        boxcontainer.innerHTML="";
+        boxref.innerHTML="";
+        i=1;
+        for(item of nameArray){
+            if(i%2!=0){
+                var p1=document.createElement("p");
+                
+                    p1.innerHTML=item;
+                   
+                    boxcontainer.appendChild(p1);
+                    
+                    }
+                    else{
+                    var p2=document.createElement("p");
+                     p2.innerHTML=item;
+                     boxref.appendChild(p2);
+                    }
+                i++;
+                }
+    }
+      
+   </script>
+</body>
+</html>
