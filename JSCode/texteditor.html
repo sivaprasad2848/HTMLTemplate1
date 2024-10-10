@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width:250px;
+            height:300px;
+            border:1px solid #333;
+        }
+        .bld{
+            font-weight: bold;
+        }
+        .ita{
+            font-style: italic;
+        }
+        .undl{
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <input type="button" id="btnBold" value="B">
+    <input type="button" id="btnItalic" value="I">
+    <input type="button" id="btnUnderline" value="U">
+    <div contenteditable="true" id="cntainer" class="box">
+        
+    </div>
+ <script>
+    var cnt=document.querySelector("#cntainer");
+    var btnBold=document.querySelector("#btnBold");
+    var btnItalic=document.querySelector("#btnItalic");
+    var btnUnderline=document.querySelector("#btnUnderline");
+    var boldFlag=0;
+    btnBold.onclick=function(){
+        if(boldFlag==0){
+            cnt.setAttribute('class','bld');
+            boldFlag=1;
+        }
+        else{
+            cnt.classList.remove("bld");
+            boldFlag=0;
+        }
+        
+    }
+    btnItalic.onclick=function(){
+        cnt.setAttribute('class','ita');
+    }
+    btnUnderline.onclick=function(){
+        cnt.setAttribute('class','undl');
+    }
+</script>
+</body>
+</html>

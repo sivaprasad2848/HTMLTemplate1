@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        .calcContainer{
+            width:350px;
+            height:400px;
+            margin:0px auto;
+            border:1px solid #333;
+        }
+        .calcContainer .topScreen{
+            width:100%;
+            height:90px;
+            border-bottom:1px solid #333;
+        }
+        .calcContainer .topScreen .txtScreen{
+            
+            margin:20px 30px auto;
+            height:50px;
+            width:260px;
+            font-size: 25px;
+        }
+        .calcContainer .btnContainer{
+            width:100%;
+            height:290px;
+            display:grid;
+            grid-template-columns: 80px 80px 80px 80px;
+            grid-template-rows: auto auto auto auto;
+            grid-gap: 5px;
+            
+        }
+        .calcContainer .btnContainer .item{
+            padding:5px;
+            background-color: bisque;
+        }
+    </style>
+</head>
+<body>
+    <div class="calcContainer">
+            <!--Topscreen-->
+            <div class="topScreen">
+                <input type="text" class="txtScreen">
+            </div>
+            <!--Topscreen-->
+            <!--Button Container-->
+            <div class="btnContainer">
+                <div class="item">
+                    <input type="button" value="0">
+                </div>
+                <div class="item">
+                    <input type="button" value="1">
+                </div>
+                <div class="item">
+                    <input type="button" value="2">
+                </div>
+                <div class="item">
+                    <input type="button" value="+">
+                </div>
+                <div class="item">
+                    <input type="button" value="3">
+                </div>
+                <div class="item">
+                    <input type="button" value="4">
+                </div>
+                <div class="item">
+                    <input type="button" value="5">
+                </div>
+                <div class="item">
+                    <input type="button" value="-">
+                </div>
+                <div class="item">
+                    <input type="button" value="6">
+                </div>
+                <div class="item">
+                    <input type="button" value="7">
+                </div>
+                <div class="item">
+                    <input type="button" value="8">
+                </div>
+                <div class="item">
+                    <input type="button" value="x">
+                </div>
+                <div class="item">
+                    <input type="button" value="9">
+                </div>
+                <div class="item">
+                    <input type="button" value="=">
+                </div>
+                <div class="item">
+                    <input type="button" value="/">
+                </div>
+            </div>
+            <!--Button Container-->
+    </div>
+
+</body>
+</html>
